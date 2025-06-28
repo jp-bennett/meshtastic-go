@@ -5,7 +5,7 @@ import (
 	"encoding/binary"
 	"fmt"
 	"github.com/charmbracelet/log"
-	"github.com/crypto-smoke/meshtastic-go/transport"
+	"github.com/jp-bennett/meshtastic-go/transport"
 	"go.bug.st/serial"
 	"google.golang.org/protobuf/proto"
 	"io"
