@@ -109,10 +109,10 @@ func (c *Client) Handle(channel string, h HandlerFunc) {
 	c.client.Subscribe(topic+"/+", 0, c.handleBrokerMessage)
 }
 func (c *Client) GetFullTopicForChannel(channel string) string {
-	return c.topicRoot + "/c/" + channel
+	return c.topicRoot + "/e/" + channel
 }
 func (c *Client) GetChannelFromTopic(topic string) string {
-	trimmed := strings.TrimPrefix(topic, c.topicRoot+"/c/")
+	trimmed := strings.TrimPrefix(topic, c.topicRoot+"/e/")
 	sepIndex := strings.Index(trimmed, "/")
 	if sepIndex > 0 {
 		return trimmed[:sepIndex]
